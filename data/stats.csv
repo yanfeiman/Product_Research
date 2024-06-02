@@ -1,0 +1,329 @@
+Title,Keyword,Type,Mean,Median,Mode,Mode Freq,Std Dev,Max,Min,Percentile25,Percentile75
+Revenue,,Organic,11476.58,1090.09,9.99,322,42711.99,1749582.0,0.03,197.94,6151.2
+Prices,,Organic,49.99,17.9,9.99,6950,144.46,15017.4,0.01,11.99,39.89
+Rating,,Organic,4.18,4.4,4.5,13342,0.99,5.0,0.0,4.1,4.6
+Reviews Count,,Organic,584.88,44.0,1.0,6791,2167.55,88643.0,1.0,7.0,281.0
+Best Sellers Revenue,,Organic,157858.0,35777.68,388238.95,7,251629.5,1749582.0,9.99,9410.58,195874.33
+Best Sellers Prices,,Organic,15.63,12.99,9.99,61,10.61,72.0,3.9,9.99,15.95
+Past Month Sales Revenue,,Organic,33625.68,6365.1,79.92,20,87660.56,1749582.0,2.99,1261.53,27423.38
+Past Month Sales Prices,,Organic,17.0,13.59,9.99,1519,16.04,446.0,0.01,9.99,16.99
+Prime Revenue,,Organic,12624.01,1357.0,9.99,302,44723.75,1749582.0,1.98,236.0,7307.62
+Prime Prices,,Organic,39.14,15.99,9.99,6722,115.41,15017.4,0.98,10.99,32.99
+Amount Discounted,,Organic,6.34,2.99,1.0,1469,16.76,620.0,-3.51,1.2,5.9
+Percentage Discounted,,Organic,0.21,0.17,0.1,205,0.14,1.0,-0.47,0.1,0.29
+Revenue,,Paid,13397.16,1522.73,4485.96,13,52449.33,1212977.28,6.99,294.0,7122.87
+Prices,,Paid,59.28,25.99,9.99,172,135.23,4376.98,4.88,13.99,56.99
+Rating,,Paid,4.2,4.4,4.5,634,1.01,5.0,0.0,4.2,4.6
+Reviews Count,,Paid,536.67,43.0,1.0,215,2080.58,45861.0,1.0,9.0,274.0
+Best Sellers Revenue,,Paid,96907.38,17584.65,727.35,1,211299.54,780903.12,727.35,862.92,90619.2
+Best Sellers Prices,,Paid,16.62,11.99,11.19,2,11.42,50.29,7.99,9.99,16.99
+Past Month Sales Revenue,,Paid,36254.56,6613.64,530.41,6,108303.84,1212977.28,9.99,1103.39,24628.16
+Past Month Sales Prices,,Paid,20.96,13.99,13.99,57,21.26,196.88,4.89,11.95,19.99
+Prime Revenue,,Paid,14009.87,1673.46,4485.96,13,54621.81,1212977.28,7.98,300.93,7776.0
+Prime Prices,,Paid,50.3,23.99,9.99,164,93.71,1740.0,4.88,13.99,49.99
+Amount Discounted,,Paid,8.86,4.0,1.0,57,17.84,287.5,0.5,2.0,10.0
+Percentage Discounted,,Paid,0.18,0.15,0.19,17,0.12,0.74,0.05,0.09,0.21
+Revenue,moissanite,Organic,9920.25,1349.91,99.99,45,34114.27,1021063.0,0.09,357.98,5472.0
+Prices,moissanite,Organic,150.86,69.99,59.99,332,260.68,4109.0,0.01,40.0,139.0
+Rating,moissanite,Organic,4.13,4.4,5.0,1537,1.17,5.0,0.0,4.1,4.8
+Reviews Count,moissanite,Organic,260.34,15.0,1.0,962,1385.19,43529.0,1.0,4.0,65.0
+Best Sellers Revenue,moissanite,Organic,264403.89,113669.17,54015.85,3,291476.09,1021063.0,1686.62,54015.85,388223.0
+Best Sellers Prices,moissanite,Organic,26.19,15.95,15.95,4,18.16,54.95,9.98,15.95,41.95
+Past Month Sales Revenue,moissanite,Organic,68083.59,30718.98,61519.5,5,103984.6,711138.78,69.95,9008.31,77773.99
+Past Month Sales Prices,moissanite,Organic,41.63,19.99,9.99,20,43.85,299.99,4.93,13.95,54.92
+Prime Revenue,moissanite,Organic,11458.86,1687.76,99.99,30,36666.07,1021063.0,5.46,419.93,6629.61
+Prime Prices,moissanite,Organic,116.36,65.99,49.99,311,198.49,4109.0,4.93,39.99,104.99
+Amount Discounted,moissanite,Organic,23.06,10.0,10.0,36,42.7,356.7,0.6,5.0,20.0
+Percentage Discounted,moissanite,Organic,0.23,0.2,0.25,20,0.14,0.73,0.05,0.1,0.3
+Revenue,moissanite,Paid,19234.77,3559.6,71596.42,6,40895.03,296448.1,44.97,981.96,16127.72
+Prices,moissanite,Paid,100.52,74.99,39.99,12,87.03,699.0,7.99,45.99,127.24
+Rating,moissanite,Paid,4.31,4.4,4.4,50,0.72,5.0,0.0,4.2,4.6
+Reviews Count,moissanite,Paid,395.82,45.0,4.0,10,1719.87,21190.0,1.0,11.0,237.75
+Past Month Sales Revenue,moissanite,Paid,87845.98,69304.3,127859.55,2,94087.8,296448.1,909.3,17993.89,116494.26
+Past Month Sales Prices,moissanite,Paid,55.78,41.99,41.99,2,51.74,196.88,11.98,20.98,60.49
+Prime Revenue,moissanite,Paid,20396.45,3854.36,71596.42,6,42228.65,296448.1,44.97,1101.63,17275.68
+Prime Prices,moissanite,Paid,91.23,69.99,39.99,12,67.43,499.95,7.99,45.99,119.99
+Amount Discounted,moissanite,Paid,7.82,6.0,10.0,5,7.15,35.75,1.0,4.0,10.0
+Percentage Discounted,moissanite,Paid,0.14,0.14,0.2,5,0.08,0.33,0.05,0.08,0.2
+Revenue,birthstone,Organic,13688.47,1199.76,9.99,43,55721.69,1284337.28,0.79,216.79,6838.4
+Prices,birthstone,Organic,58.19,24.99,9.99,777,127.43,3519.0,0.01,14.99,45.99
+Rating,birthstone,Organic,4.2,4.5,4.5,1823,1.06,5.0,0.0,4.2,4.6
+Reviews Count,birthstone,Organic,499.17,40.0,1.0,1015,1916.09,45855.0,1.0,6.0,262.0
+Best Sellers Revenue,birthstone,Organic,332077.72,48187.81,11688.3,4,396070.21,1118520.0,3551.05,11688.3,683540.0
+Best Sellers Prices,birthstone,Organic,25.29,11.99,9.99,6,22.34,72.0,3.9,9.99,44.0
+Past Month Sales Revenue,birthstone,Organic,71823.91,14162.19,153096.19,11,170850.3,1284337.28,7.99,3470.76,66350.52
+Past Month Sales Prices,birthstone,Organic,29.12,19.9,9.99,71,26.28,199.0,3.6,12.99,34.99
+Prime Revenue,birthstone,Organic,16180.52,1819.86,9.99,38,62289.77,1284337.28,2.72,309.95,8851.44
+Prime Prices,birthstone,Organic,47.47,21.99,9.99,708,105.09,2175.0,2.72,13.99,41.19
+Amount Discounted,birthstone,Organic,8.99,4.0,2.0,109,12.81,100.0,0.49,2.0,10.0
+Percentage Discounted,birthstone,Organic,0.22,0.18,0.2,32,0.15,0.7,0.05,0.1,0.29
+Revenue,birthstone,Paid,17229.22,1203.72,8969.31,15,81060.09,1284337.28,7.99,299.8,5926.78
+Prices,birthstone,Paid,59.9,35.99,79.99,39,74.63,894.89,5.99,16.11,79.99
+Rating,birthstone,Paid,4.18,4.4,4.4,125,1.1,5.0,0.0,4.3,4.6
+Reviews Count,birthstone,Paid,564.56,31.0,1.0,35,2598.47,43535.0,1.0,8.0,159.0
+Best Sellers Revenue,birthstone,Paid,34803.28,2487.58,727.35,1,65824.91,133510.63,727.35,766.35,36524.51
+Best Sellers Prices,birthstone,Paid,14.79,11.59,9.99,1,7.51,25.99,9.99,10.89,15.49
+Past Month Sales Revenue,birthstone,Paid,76071.63,6856.88,530.41,5,205342.43,1284337.28,47.96,766.35,62148.43
+Past Month Sales Prices,birthstone,Paid,25.05,13.99,9.99,12,26.31,129.99,5.99,11.98,23.24
+Prime Revenue,birthstone,Paid,16975.59,1287.79,8969.31,14,85267.81,1284337.28,7.99,302.98,5999.5
+Prime Prices,birthstone,Paid,55.76,36.49,9.99,38,65.91,894.89,5.99,15.98,79.99
+Amount Discounted,birthstone,Paid,15.45,10.0,30.0,17,14.6,50.0,0.95,3.8,30.0
+Percentage Discounted,birthstone,Paid,0.21,0.2,0.19,17,0.11,0.56,0.05,0.16,0.22
+Revenue,cubic zirconia,Organic,12886.34,1198.8,9.99,46,41134.8,1141697.27,0.79,184.66,7407.64
+Prices,cubic zirconia,Organic,30.98,15.99,9.99,869,71.4,3499.0,0.79,12.96,28.3
+Rating,cubic zirconia,Organic,4.22,4.4,4.5,1837,0.81,5.0,0.0,4.1,4.5
+Reviews Count,cubic zirconia,Organic,673.92,57.0,1.0,758,2163.93,45855.0,1.0,9.0,365.0
+Best Sellers Revenue,cubic zirconia,Organic,200961.31,63178.7,63178.7,6,263295.46,1021566.4,727.35,19160.02,353641.34
+Best Sellers Prices,cubic zirconia,Organic,14.85,13.95,13.95,7,6.44,41.95,5.99,11.19,14.99
+Past Month Sales Revenue,cubic zirconia,Organic,44597.25,13248.53,61603.2,9,90265.19,1141697.27,6.99,2377.61,53790.97
+Past Month Sales Prices,cubic zirconia,Organic,17.67,13.99,9.99,119,16.6,446.0,3.49,11.99,17.96
+Prime Revenue,cubic zirconia,Organic,14039.53,1428.9,9.99,44,43137.45,1141697.27,2.99,220.04,8778.4
+Prime Prices,cubic zirconia,Organic,27.63,15.95,9.99,851,60.71,3499.0,2.99,12.95,26.99
+Amount Discounted,cubic zirconia,Organic,5.55,2.99,1.0,181,9.9,101.5,0.5,1.5,5.01
+Percentage Discounted,cubic zirconia,Organic,0.2,0.14,0.07,35,0.15,0.7,0.03,0.08,0.27
+Revenue,cubic zirconia,Paid,13703.81,1281.08,361.2,7,66203.94,1212977.28,7.99,209.2,5520.22
+Prices,cubic zirconia,Paid,55.38,19.99,12.99,30,144.38,1650.0,5.49,13.95,40.49
+Rating,cubic zirconia,Paid,4.14,4.4,4.5,88,1.08,5.0,0.0,4.1,4.6
+Reviews Count,cubic zirconia,Paid,487.23,36.0,1.0,23,1785.98,16730.0,1.0,9.0,205.75
+Best Sellers Revenue,cubic zirconia,Paid,128749.11,128749.11,128749.11,1,,128749.11,128749.11,128749.11,128749.11
+Best Sellers Prices,cubic zirconia,Paid,14.99,14.99,14.99,1,,14.99,14.99,14.99,14.99
+Past Month Sales Revenue,cubic zirconia,Paid,46014.19,4515.48,749.5,3,147835.53,1212977.28,19.98,749.5,30851.01
+Past Month Sales Prices,cubic zirconia,Paid,21.74,14.99,9.99,9,21.34,129.99,7.99,12.99,19.99
+Prime Revenue,cubic zirconia,Paid,14479.93,1148.02,361.2,7,68818.62,1212977.28,7.99,199.8,5522.98
+Prime Prices,cubic zirconia,Paid,41.84,19.99,12.99,30,105.55,1650.0,5.49,13.56,37.0
+Amount Discounted,cubic zirconia,Paid,5.87,3.0,1.0,12,8.52,44.14,1.0,2.0,5.59
+Percentage Discounted,cubic zirconia,Paid,0.17,0.13,0.07,9,0.11,0.5,0.05,0.09,0.22
+Revenue,sterling silver,Organic,16120.66,2410.32,9.99,24,43634.54,870240.0,0.07,432.64,11773.27
+Prices,sterling silver,Organic,35.62,17.99,9.99,1001,99.18,9589.99,0.07,12.99,33.99
+Rating,sterling silver,Organic,4.24,4.4,4.5,2533,0.78,5.0,0.0,4.2,4.6
+Reviews Count,sterling silver,Organic,881.2,104.0,1.0,672,2555.2,47303.0,1.0,17.0,599.0
+Best Sellers Revenue,sterling silver,Organic,129567.2,27522.44,5047.79,5,186722.27,870240.0,711.11,13838.4,177889.76
+Best Sellers Prices,sterling silver,Organic,14.8,13.95,9.99,7,7.88,56.0,4.1,9.99,15.98
+Past Month Sales Revenue,sterling silver,Organic,41185.34,12365.99,2687.31,10,77803.59,870240.0,6.98,2603.0,43318.2
+Past Month Sales Prices,sterling silver,Organic,17.26,13.99,13.99,320,12.44,168.0,0.7,11.99,17.99
+Prime Revenue,sterling silver,Organic,17556.62,2901.58,19.98,22,45703.0,870240.0,2.99,558.0,13771.01
+Prime Prices,sterling silver,Organic,29.08,16.99,9.99,976,41.82,1450.0,2.99,12.99,29.99
+Amount Discounted,sterling silver,Organic,5.09,2.71,1.0,277,9.0,145.01,0.5,1.0,5.0
+Percentage Discounted,sterling silver,Organic,0.2,0.15,0.07,52,0.15,0.96,0.05,0.09,0.25
+Revenue,sterling silver,Paid,18360.38,1807.0,769.89,8,74301.88,1157576.0,7.98,282.36,8624.36
+Prices,sterling silver,Paid,47.4,22.99,14.99,31,124.41,2149.0,3.69,14.96,40.0
+Rating,sterling silver,Paid,4.12,4.4,4.5,125,1.11,5.0,0.0,4.2,4.6
+Reviews Count,sterling silver,Paid,857.79,59.0,1.0,33,3882.19,45861.0,1.0,10.0,337.0
+Best Sellers Revenue,sterling silver,Paid,40252.05,29387.22,749.73,1,45909.3,90619.2,749.73,15068.48,60003.21
+Best Sellers Prices,sterling silver,Paid,9.39,8.99,7.99,1,1.64,11.19,7.99,8.49,10.09
+Past Month Sales Revenue,sterling silver,Paid,39783.1,4739.21,12.99,2,118370.63,733317.39,12.99,1320.9,27649.06
+Past Month Sales Prices,sterling silver,Paid,21.87,13.99,9.99,13,22.68,129.99,3.69,11.44,19.99
+Prime Revenue,sterling silver,Paid,20855.36,2199.6,769.89,8,79470.81,1157576.0,7.98,391.39,11057.0
+Prime Prices,sterling silver,Paid,38.98,22.99,14.99,31,81.34,1699.0,4.99,13.99,39.99
+Amount Discounted,sterling silver,Paid,3.14,2.05,1.0,16,3.12,20.0,0.6,1.0,3.9
+Percentage Discounted,sterling silver,Paid,0.15,0.12,0.08,4,0.09,0.5,0.05,0.08,0.2
+Revenue,rings,Organic,16970.68,2038.64,9.99,21,47289.9,897518.7,0.03,336.7,12123.38
+Prices,rings,Organic,34.37,12.99,9.99,823,162.54,4768.9,0.01,9.99,19.99
+Rating,rings,Organic,4.27,4.4,4.5,949,0.66,5.0,0.0,4.1,4.6
+Reviews Count,rings,Organic,1128.89,118.0,1.0,209,3382.27,71518.0,1.0,22.0,725.0
+Best Sellers Revenue,rings,Organic,166850.17,85724.19,388238.95,9,178661.12,797241.18,35.98,28911.06,231766.92
+Best Sellers Prices,rings,Organic,13.3,11.99,9.99,22,5.96,54.95,5.88,9.99,14.99
+Past Month Sales Revenue,rings,Organic,27354.91,6155.6,61519.5,10,61685.92,797241.18,5.97,1235.67,23511.88
+Past Month Sales Prices,rings,Organic,13.9,12.58,9.99,288,9.93,249.99,0.5,8.99,14.99
+Prime Revenue,rings,Organic,17564.07,2232.49,9.99,21,48128.27,897518.7,3.69,371.88,12816.24
+Prime Prices,rings,Organic,32.42,12.99,9.99,814,162.97,4768.9,1.31,9.99,18.99
+Amount Discounted,rings,Organic,4.87,2.0,1.0,194,10.29,128.48,0.5,1.0,5.0
+Percentage Discounted,rings,Organic,0.2,0.16,0.1,31,0.14,0.78,0.05,0.1,0.29
+Revenue,rings,Paid,16059.95,4438.74,111.92,3,31384.55,257091.43,12.99,964.42,16662.51
+Prices,rings,Paid,34.55,15.96,13.99,17,55.02,398.99,4.88,13.34,28.24
+Rating,rings,Paid,4.28,4.3,4.4,24,0.61,5.0,0.0,4.2,4.5
+Reviews Count,rings,Paid,812.68,188.0,1.0,5,1393.15,8466.0,1.0,40.75,830.0
+Best Sellers Revenue,rings,Paid,56338.38,56338.38,56338.38,1,,56338.38,56338.38,56338.38,56338.38
+Best Sellers Prices,rings,Paid,21.99,21.99,21.99,1,,21.99,21.99,21.99,21.99
+Past Month Sales Revenue,rings,Paid,20321.72,8923.78,3329.62,3,27109.28,119922.0,111.92,2689.55,24324.24
+Past Month Sales Prices,rings,Paid,15.6,13.99,13.99,7,11.52,69.99,5.99,9.99,15.98
+Prime Revenue,rings,Paid,16297.23,4549.09,111.92,3,31919.66,257091.43,12.99,979.3,17275.68
+Prime Prices,rings,Paid,28.64,14.99,13.99,17,36.97,299.99,4.88,12.99,27.6
+Amount Discounted,rings,Paid,5.9,2.0,1.0,3,6.31,20.0,1.0,1.96,10.0
+Percentage Discounted,rings,Paid,0.16,0.12,0.1,2,0.08,0.3,0.07,0.1,0.2
+Revenue,necklace,Organic,18163.75,1917.36,19.98,53,62150.91,1283887.33,1.62,287.64,10385.0
+Prices,necklace,Organic,23.22,12.99,9.99,1060,60.93,2099.0,0.01,9.99,17.99
+Rating,necklace,Organic,4.34,4.4,4.5,1618,0.61,5.0,0.0,4.3,4.6
+Reviews Count,necklace,Organic,1049.45,120.0,1.0,277,3286.48,45839.0,1.0,21.0,668.0
+Best Sellers Revenue,necklace,Organic,145847.47,26539.62,7882.11,5,245246.82,1068621.68,89.91,9460.11,195874.33
+Best Sellers Prices,necklace,Organic,16.93,13.99,9.99,10,13.07,68.89,4.13,9.99,16.24
+Past Month Sales Revenue,necklace,Organic,35530.77,5652.35,19.98,10,95267.02,1283887.33,5.04,1228.36,25570.35
+Past Month Sales Prices,necklace,Organic,17.23,13.45,9.99,372,15.11,159.99,0.01,9.99,17.1
+Prime Revenue,necklace,Organic,18208.35,2006.88,19.98,52,61123.57,1283887.33,1.98,294.1,10836.22
+Prime Prices,necklace,Organic,19.8,12.99,9.99,1040,51.67,2099.0,1.98,9.99,16.99
+Amount Discounted,necklace,Organic,4.62,2.01,1.0,256,13.43,385.01,0.5,1.0,4.0
+Percentage Discounted,necklace,Organic,0.2,0.17,0.1,40,0.14,1.0,0.05,0.1,0.28
+Revenue,necklace,Paid,24641.86,5501.33,24639.58,4,54558.71,389596.35,9.99,731.39,24639.58
+Prices,necklace,Paid,20.26,14.99,13.99,18,16.7,162.0,4.89,12.99,22.99
+Rating,necklace,Paid,4.44,4.4,4.4,38,0.33,5.0,2.0,4.3,4.6
+Reviews Count,necklace,Paid,1666.82,335.0,1.0,5,3749.46,24365.0,1.0,38.0,1678.0
+Best Sellers Revenue,necklace,Paid,28496.26,28496.26,13101.26,1,21771.81,43891.25,13101.26,20798.76,36193.75
+Best Sellers Prices,necklace,Paid,12.24,12.24,9.49,1,3.89,14.99,9.49,10.86,13.62
+Past Month Sales Revenue,necklace,Paid,28300.4,8323.79,80593.56,3,48684.27,315519.1,89.94,3065.66,26055.14
+Past Month Sales Prices,necklace,Paid,18.02,13.99,13.99,13,15.24,94.99,4.89,11.98,17.48
+Prime Revenue,necklace,Paid,25160.83,5763.99,24639.58,4,55595.38,389596.35,9.99,749.96,24639.58
+Prime Prices,necklace,Paid,20.05,14.99,13.99,18,16.84,162.0,4.89,12.99,22.72
+Amount Discounted,necklace,Paid,3.91,3.0,1.0,9,5.56,28.8,1.0,1.0,4.0
+Percentage Discounted,necklace,Paid,0.18,0.15,0.06,4,0.12,0.5,0.06,0.08,0.25
+Revenue,earrings,Organic,12592.26,1025.82,9.99,40,44125.47,1749582.0,2.99,159.68,7289.71
+Prices,earrings,Organic,24.35,12.99,9.99,929,188.11,15017.4,0.98,8.99,15.99
+Rating,earrings,Organic,4.31,4.4,4.5,1477,0.57,5.0,0.0,4.2,4.6
+Reviews Count,earrings,Organic,758.83,76.0,1.0,367,2334.78,47286.0,1.0,14.0,466.25
+Best Sellers Revenue,earrings,Organic,149740.14,17897.6,1006.88,3,308157.04,1749582.0,9.99,3710.38,116520.47
+Best Sellers Prices,earrings,Organic,13.42,13.69,9.99,8,5.03,37.0,7.99,9.99,14.98
+Past Month Sales Revenue,earrings,Organic,25302.51,5079.09,39.96,6,64201.25,1749582.0,2.99,940.37,22738.6
+Past Month Sales Prices,earrings,Organic,14.81,13.45,13.99,327,9.76,146.62,1.98,9.99,15.9
+Prime Revenue,earrings,Organic,12670.23,1066.79,9.99,39,43348.21,1749582.0,2.99,162.11,7655.9
+Prime Prices,earrings,Organic,22.47,12.99,9.99,908,174.63,15017.4,0.98,8.99,15.98
+Amount Discounted,earrings,Organic,4.37,2.0,1.0,279,18.79,620.0,0.5,1.0,4.0
+Percentage Discounted,earrings,Organic,0.21,0.17,0.1,38,0.14,0.75,0.05,0.1,0.29
+Revenue,earrings,Paid,16899.43,1407.47,202.4,6,41947.11,287905.0,7.99,252.6,11593.16
+Prices,earrings,Paid,19.95,14.2,13.99,23,20.87,170.99,5.99,11.99,21.99
+Rating,earrings,Paid,4.33,4.5,4.5,54,0.85,5.0,0.0,4.3,4.6
+Reviews Count,earrings,Paid,973.69,91.0,1.0,9,2355.75,20275.0,1.0,20.25,733.75
+Best Sellers Revenue,earrings,Paid,89.91,89.91,89.91,1,,89.91,89.91,89.91,89.91
+Best Sellers Prices,earrings,Paid,9.99,9.99,9.99,1,,9.99,9.99,9.99,9.99
+Past Month Sales Revenue,earrings,Paid,30201.19,9043.94,439.56,2,54245.87,287905.0,38.97,1407.48,35198.24
+Past Month Sales Prices,earrings,Paid,14.94,13.99,13.99,15,5.17,31.99,7.99,10.99,16.99
+Prime Revenue,earrings,Paid,17077.84,1375.4,202.4,6,42211.01,287905.0,7.99,255.3,11667.99
+Prime Prices,earrings,Paid,19.36,13.99,13.99,23,19.0,170.99,5.99,11.99,21.99
+Amount Discounted,earrings,Paid,3.54,3.25,1.0,6,2.8,15.07,1.0,1.54,4.66
+Percentage Discounted,earrings,Paid,0.2,0.14,0.07,3,0.15,0.5,0.05,0.07,0.33
+Revenue,amethyst,Organic,9330.06,899.8,99.99,34,41151.97,1283887.33,0.03,164.95,4793.31
+Prices,amethyst,Organic,48.87,19.99,9.99,438,92.08,2046.61,0.01,12.99,45.99
+Rating,amethyst,Organic,4.15,4.4,4.5,802,1.07,5.0,0.0,4.1,4.6
+Reviews Count,amethyst,Organic,470.95,31.0,1.0,475,2052.69,66948.0,1.0,5.0,213.0
+Best Sellers Revenue,amethyst,Organic,192754.87,14592.7,853160.0,2,312622.87,853160.0,1048.95,2193.62,363612.6
+Best Sellers Prices,amethyst,Organic,18.25,12.98,8.99,2,14.58,55.0,6.99,9.98,18.99
+Past Month Sales Revenue,amethyst,Organic,45427.14,7892.75,69.9,2,126456.54,1283887.33,8.99,2212.58,32550.98
+Past Month Sales Prices,amethyst,Organic,16.75,12.98,9.99,56,15.13,129.99,2.99,8.99,17.77
+Prime Revenue,amethyst,Organic,10513.51,1136.4,99.99,34,44299.67,1283887.33,3.99,198.0,6066.61
+Prime Prices,amethyst,Organic,40.34,18.0,9.99,430,72.14,2046.61,2.95,11.99,39.99
+Amount Discounted,amethyst,Organic,7.18,2.92,1.0,71,22.87,320.75,0.37,1.14,6.0
+Percentage Discounted,amethyst,Organic,0.21,0.16,0.1,11,0.15,0.74,0.04,0.1,0.29
+Revenue,amethyst,Paid,10355.69,2263.38,2750.28,5,26475.03,246390.0,12.72,506.73,6834.64
+Prices,amethyst,Paid,57.52,35.99,49.99,16,83.96,1200.0,6.36,17.99,69.99
+Rating,amethyst,Paid,4.36,4.5,4.5,65,0.68,5.0,0.0,4.3,4.6
+Reviews Count,amethyst,Paid,307.05,54.0,2.0,20,751.81,8662.0,1.0,10.0,318.25
+Past Month Sales Revenue,amethyst,Paid,18280.88,4169.02,237.83,1,31949.33,118034.93,237.83,1949.48,17984.36
+Past Month Sales Prices,amethyst,Paid,19.68,15.97,13.99,3,9.08,39.99,11.99,13.99,19.49
+Prime Revenue,amethyst,Paid,10671.56,2639.45,2750.28,5,27012.21,246390.0,12.72,539.17,7401.4
+Prime Prices,amethyst,Paid,53.95,32.99,49.99,15,84.38,1200.0,6.36,16.99,59.99
+Amount Discounted,amethyst,Paid,10.53,8.97,1.0,2,8.39,31.0,1.0,6.0,10.0
+Percentage Discounted,amethyst,Paid,0.23,0.18,0.05,2,0.18,0.7,0.05,0.08,0.32
+Revenue,aquamarine,Organic,11876.66,1157.38,99.99,17,48392.4,1212722.31,1.06,239.94,6098.08
+Prices,aquamarine,Organic,88.86,31.99,9.99,218,173.61,3646.2,1.06,14.99,79.99
+Rating,aquamarine,Organic,4.15,4.4,5.0,721,1.06,5.0,0.0,4.1,4.6
+Reviews Count,aquamarine,Organic,491.84,24.0,1.0,514,2136.15,88643.0,1.0,4.0,192.0
+Best Sellers Revenue,aquamarine,Organic,285830.5,84885.03,716.16,1,397445.35,1021398.6,716.16,7707.79,535791.3
+Best Sellers Prices,aquamarine,Organic,22.8,12.98,9.99,4,18.79,65.0,8.99,9.99,30.97
+Past Month Sales Revenue,aquamarine,Organic,67928.98,20989.93,169510.32,3,149469.43,1212722.31,43.0,4742.2,66346.45
+Past Month Sales Prices,aquamarine,Organic,23.22,13.99,9.99,25,21.92,156.0,3.29,11.95,24.98
+Prime Revenue,aquamarine,Organic,13958.28,1505.0,99.99,17,52516.5,1212722.31,4.99,279.86,8127.29
+Prime Prices,aquamarine,Organic,64.9,26.99,9.99,212,131.48,3646.2,1.48,13.99,59.99
+Amount Discounted,aquamarine,Organic,9.42,4.0,1.0,27,15.23,100.0,0.5,1.89,10.0
+Percentage Discounted,aquamarine,Organic,0.2,0.15,0.29,6,0.15,0.71,0.05,0.09,0.29
+Revenue,aquamarine,Paid,12673.82,2028.55,299.88,6,45967.79,780903.12,9.99,319.64,8545.5
+Prices,aquamarine,Paid,72.21,29.99,39.99,24,167.03,1740.0,4.99,14.99,49.99
+Rating,aquamarine,Paid,4.28,4.5,4.5,92,0.78,5.0,0.0,4.2,4.6
+Reviews Count,aquamarine,Paid,421.35,61.0,1.0,26,1322.65,15528.0,1.0,9.0,327.0
+Best Sellers Revenue,aquamarine,Paid,390883.02,390883.02,862.92,1,551571.72,780903.12,862.92,195872.97,585893.07
+Best Sellers Prices,aquamarine,Paid,29.14,29.14,7.99,1,29.91,50.29,7.99,18.56,39.72
+Past Month Sales Revenue,aquamarine,Paid,39487.34,8572.32,16363.62,2,112029.07,780903.12,44.97,1241.52,21623.99
+Past Month Sales Prices,aquamarine,Paid,27.67,18.49,9.99,5,24.44,99.99,4.99,12.23,34.46
+Prime Revenue,aquamarine,Paid,13154.48,2336.1,299.88,6,48115.63,780903.12,9.99,415.82,8664.08
+Prime Prices,aquamarine,Paid,64.56,25.0,14.99,21,158.25,1740.0,4.99,13.99,49.99
+Amount Discounted,aquamarine,Paid,14.98,4.0,2.0,5,43.92,287.5,0.5,2.0,10.0
+Percentage Discounted,aquamarine,Paid,0.18,0.16,0.12,4,0.1,0.4,0.05,0.11,0.23
+Revenue,lapis lazuli,Organic,5031.67,404.73,9.99,13,23043.15,991392.09,3.99,99.99,2186.94
+Prices,lapis lazuli,Organic,39.24,19.99,9.99,239,114.63,2859.88,2.99,12.99,34.99
+Rating,lapis lazuli,Organic,3.59,4.4,0.0,656,1.74,5.0,0.0,3.7,4.6
+Reviews Count,lapis lazuli,Organic,302.13,14.0,1.0,436,1115.49,24791.0,1.0,4.0,105.5
+Best Sellers Revenue,lapis lazuli,Organic,6566.43,9230.13,1443.59,1,4639.25,11678.31,1443.59,1805.09,10001.38
+Best Sellers Prices,lapis lazuli,Organic,9.99,9.99,9.99,2,3.4,14.49,5.99,7.49,12.24
+Past Month Sales Revenue,lapis lazuli,Organic,30968.59,4849.03,179.82,2,107423.37,991392.09,101.83,1984.06,24431.46
+Past Month Sales Prices,lapis lazuli,Organic,17.3,14.99,9.99,10,11.47,97.99,5.99,10.49,19.99
+Prime Revenue,lapis lazuli,Organic,6690.0,659.88,9.99,11,27255.91,991392.09,3.99,129.0,3776.86
+Prime Prices,lapis lazuli,Organic,27.0,17.99,9.99,221,35.8,650.0,3.99,11.99,27.0
+Amount Discounted,lapis lazuli,Organic,5.15,3.0,2.0,24,14.21,178.25,0.6,1.9,5.0
+Percentage Discounted,lapis lazuli,Organic,0.2,0.14,0.13,5,0.14,0.78,0.05,0.1,0.28
+Revenue,lapis lazuli,Paid,7061.5,1187.01,1885.64,3,16966.61,128952.32,9.98,247.48,4375.75
+Prices,lapis lazuli,Paid,35.77,13.49,9.99,18,81.2,884.99,4.99,8.99,26.7
+Rating,lapis lazuli,Paid,4.11,4.5,4.5,35,1.23,5.0,0.0,4.3,4.6
+Reviews Count,lapis lazuli,Paid,542.79,76.0,1.0,10,1284.36,7168.0,1.0,12.5,281.0
+Best Sellers Revenue,lapis lazuli,Paid,17584.65,17584.65,17584.65,1,,17584.65,17584.65,17584.65,17584.65
+Best Sellers Prices,lapis lazuli,Paid,16.99,16.99,16.99,1,,16.99,16.99,16.99,16.99
+Past Month Sales Revenue,lapis lazuli,Paid,12527.97,3967.83,69.95,1,20096.66,78455.92,69.95,369.38,16383.91
+Past Month Sales Prices,lapis lazuli,Paid,12.25,11.99,13.99,4,6.26,26.9,4.99,7.16,14.24
+Prime Revenue,lapis lazuli,Paid,7584.14,1208.07,2336.1,3,17496.71,128952.32,9.98,297.0,5488.14
+Prime Prices,lapis lazuli,Paid,27.45,12.99,9.99,16,47.87,362.99,4.99,8.99,20.74
+Amount Discounted,lapis lazuli,Paid,2.72,2.18,1.0,4,2.15,9.0,0.78,1.0,3.62
+Percentage Discounted,lapis lazuli,Paid,0.16,0.16,0.17,3,0.06,0.29,0.09,0.11,0.18
+Revenue,moonstone,Organic,8172.35,596.89,19.99,16,38899.5,1118520.0,1.58,120.0,3322.14
+Prices,moonstone,Organic,33.66,22.99,9.99,249,64.74,2828.0,0.39,14.02,33.99
+Rating,moonstone,Organic,4.01,4.4,4.5,695,1.23,5.0,0.0,4.0,4.6
+Reviews Count,moonstone,Organic,440.54,24.0,1.0,521,1846.48,47299.0,1.0,5.0,144.0
+Best Sellers Revenue,moonstone,Organic,186977.88,16379.5,11678.31,2,309983.55,1118520.0,949.05,4675.32,341022.5
+Best Sellers Prices,moonstone,Organic,18.47,12.99,9.99,7,15.37,72.0,8.99,9.99,14.99
+Past Month Sales Revenue,moonstone,Organic,44599.23,9144.98,84191.82,3,114811.61,1118520.0,19.98,2274.57,36437.19
+Past Month Sales Prices,moonstone,Organic,16.91,13.98,9.99,47,13.11,149.0,4.99,10.99,16.99
+Prime Revenue,moonstone,Organic,9169.08,719.4,39.96,16,41709.47,1118520.0,5.69,139.86,3871.02
+Prime Prices,moonstone,Organic,28.86,20.5,9.99,239,39.38,1302.0,2.99,13.99,31.99
+Amount Discounted,moonstone,Organic,5.54,3.0,1.0,56,7.74,90.4,0.5,1.56,6.24
+Percentage Discounted,moonstone,Organic,0.19,0.14,0.07,12,0.14,0.85,0.05,0.08,0.25
+Revenue,moonstone,Paid,7630.92,563.33,9544.17,3,30584.0,287862.4,12.99,138.66,3858.59
+Prices,moonstone,Paid,81.01,34.99,29.99,7,126.48,799.0,6.99,25.99,76.25
+Rating,moonstone,Paid,4.13,4.5,5.0,29,1.29,5.0,0.0,4.1,4.72
+Reviews Count,moonstone,Paid,347.96,10.0,1.0,20,1910.41,20272.0,1.0,3.0,83.0
+Past Month Sales Revenue,moonstone,Paid,52867.53,3622.49,12.99,1,95086.77,287862.4,12.99,649.35,50317.04
+Past Month Sales Prices,moonstone,Paid,38.78,23.99,9.99,2,50.86,169.99,9.99,12.99,31.95
+Prime Revenue,moonstone,Paid,8132.98,633.8,9544.17,3,31945.37,287862.4,12.99,144.46,3932.4
+Prime Prices,moonstone,Paid,81.81,34.99,29.99,7,128.65,799.0,6.99,26.49,69.69
+Amount Discounted,moonstone,Paid,9.67,5.0,4.0,2,10.66,30.0,1.0,4.0,8.5
+Percentage Discounted,moonstone,Paid,0.18,0.11,0.06,1,0.21,0.74,0.06,0.09,0.15
+Revenue,pearl,Organic,11218.49,589.41,9.99,65,46989.54,1090089.0,0.06,99.2,3889.22
+Prices,pearl,Organic,24.95,12.66,9.99,903,78.45,2999.0,0.01,8.99,16.99
+Rating,pearl,Organic,4.21,4.4,4.5,1161,0.92,5.0,0.0,4.2,4.6
+Reviews Count,pearl,Organic,654.7,42.0,1.0,461,2638.44,45855.0,1.0,8.0,251.0
+Best Sellers Revenue,pearl,Organic,88046.84,4675.32,4335.66,2,188444.84,807820.0,9.99,269.46,27087.3
+Best Sellers Prices,pearl,Organic,15.02,13.73,9.99,7,8.31,52.0,6.99,9.99,15.48
+Past Month Sales Revenue,pearl,Organic,26025.08,2827.28,687366.45,8,77540.7,807820.0,6.99,531.12,14393.2
+Past Month Sales Prices,pearl,Organic,15.31,12.97,9.99,218,15.3,289.97,1.97,9.29,14.99
+Prime Revenue,pearl,Organic,11418.2,619.38,9.99,62,47246.61,1090089.0,2.99,102.17,4126.77
+Prime Prices,pearl,Organic,21.85,11.99,9.99,881,57.72,2151.69,1.97,8.99,15.99
+Amount Discounted,pearl,Organic,3.67,2.0,1.0,217,5.21,70.0,-3.51,1.0,4.0
+Percentage Discounted,pearl,Organic,0.2,0.17,0.07,38,0.14,0.77,-0.47,0.1,0.26
+Revenue,pearl,Paid,9392.07,516.18,189.81,3,36259.21,327789.0,8.99,120.18,2789.77
+Prices,pearl,Paid,55.42,18.98,9.99,13,119.39,1099.0,7.21,12.99,44.53
+Rating,pearl,Paid,4.22,4.5,4.5,21,1.06,5.0,0.0,4.2,4.7
+Reviews Count,pearl,Paid,186.73,19.5,1.0,12,500.76,3034.0,1.0,6.0,116.25
+Past Month Sales Revenue,pearl,Paid,9759.83,985.14,189.81,3,24209.84,123611.4,9.99,190.92,5576.42
+Past Month Sales Prices,pearl,Paid,17.48,13.74,9.99,5,11.5,59.4,7.21,10.24,18.11
+Prime Revenue,pearl,Paid,9696.52,584.55,189.81,3,36966.35,327789.0,8.99,125.91,2879.76
+Prime Prices,pearl,Paid,47.89,18.99,9.99,12,75.3,589.0,7.21,12.99,43.16
+Amount Discounted,pearl,Paid,8.23,5.0,2.0,5,10.21,39.6,1.0,2.0,8.95
+Percentage Discounted,pearl,Paid,0.18,0.15,0.13,2,0.13,0.5,0.05,0.08,0.28
+Revenue,peridot,Organic,9060.11,854.91,99.99,23,44483.33,1284337.28,1.99,199.98,4180.0
+Prices,peridot,Organic,76.57,29.99,9.99,179,138.88,3300.0,0.99,15.88,74.0
+Rating,peridot,Organic,4.09,4.4,5.0,704,1.2,5.0,0.0,4.1,4.7
+Reviews Count,peridot,Organic,343.82,20.0,1.0,511,1289.83,26781.0,1.0,4.0,126.0
+Best Sellers Revenue,peridot,Organic,298371.78,85804.11,807820.0,2,335332.31,807820.0,1925.59,5521.0,558826.98
+Best Sellers Prices,peridot,Organic,20.99,9.99,7.99,2,18.11,52.0,6.99,8.49,29.48
+Past Month Sales Revenue,peridot,Organic,68663.71,13385.42,153921.51,2,164060.87,1284337.28,41.97,3591.0,59762.78
+Past Month Sales Prices,peridot,Organic,20.2,13.99,9.99,23,19.39,129.99,4.99,9.99,21.12
+Prime Revenue,peridot,Organic,11134.6,1259.82,99.99,21,49701.17,1284337.28,4.99,279.74,5822.95
+Prime Prices,peridot,Organic,60.18,25.99,9.99,164,100.95,2705.91,2.99,14.91,59.99
+Amount Discounted,peridot,Organic,8.73,3.0,1.0,27,22.41,258.25,0.5,1.53,7.13
+Percentage Discounted,peridot,Organic,0.2,0.17,0.23,6,0.12,0.68,0.05,0.1,0.27
+Revenue,peridot,Paid,5995.37,929.07,7.99,4,20546.67,287862.4,6.99,179.75,3568.3
+Prices,peridot,Paid,82.24,19.65,9.99,15,299.75,4376.98,4.99,10.96,57.47
+Rating,peridot,Paid,4.16,4.4,4.5,40,1.06,5.0,0.0,4.1,4.6
+Reviews Count,peridot,Paid,327.83,25.0,1.0,21,1400.48,20272.0,1.0,5.0,155.5
+Best Sellers Revenue,peridot,Paid,884.41,884.41,884.41,1,,884.41,884.41,884.41,884.41
+Best Sellers Prices,peridot,Paid,14.99,14.99,14.99,1,,14.99,14.99,14.99,14.99
+Past Month Sales Revenue,peridot,Paid,8230.93,1524.91,1359.15,2,11913.51,42578.7,59.99,629.1,11662.22
+Past Month Sales Prices,peridot,Paid,17.94,13.99,13.99,5,13.51,59.99,5.99,11.99,15.99
+Prime Revenue,peridot,Paid,6457.94,1024.85,7.99,4,21913.71,287862.4,7.99,161.82,3927.04
+Prime Prices,peridot,Paid,44.1,15.99,9.99,13,75.3,799.0,4.99,9.99,48.08
+Amount Discounted,peridot,Paid,3.5,2.0,1.0,5,6.92,30.0,0.5,1.0,3.0
+Percentage Discounted,peridot,Paid,0.13,0.12,0.07,2,0.06,0.3,0.07,0.08,0.17
