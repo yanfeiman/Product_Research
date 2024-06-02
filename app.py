@@ -185,21 +185,27 @@ with col[0]:
 with col[1]:
     if "Best" in select_metric: 
         st.markdown('#### Top Best Sellers by Minimum Revenue')
-        top_df = df[df.Best_Seller == True]
+        all_df = df[df.Best_Seller == True]
     elif "Prime" in select_metric: 
         st.markdown('#### Top Prime Products by Minimum Revenue')
-        top_df = df[df.Prime == True]
+        all_df = df[df.Prime == True]
     elif "Past" in select_metric: 
         st.markdown('#### Top Products with Past Month Sales Info by Minimum Revenue')
-        top_df = df[df['Sales_Volume_Past_Month'].notnull()]
+        all_df = df[df['Sales_Volume_Past_Month'].notnull()]
     elif "Discount" in select_metric or 'Strikethrough' in select_metric: 
         st.markdown('#### Top Products with Price Strikethrough by Minimum Revenue')
-        top_df = df[df['Discount'].notnull()]
+        all_df = df[df['Discount'].notnull()]
     else: 
         st.markdown('#### Top Products by Minimum Revenue')
-        top_df = df
+        all_df = df
 
-    st.markdown(f'{len(top_df)} Total Products')
+    if 1000 < len(df): val = 1000
+    else: val = len(df)
+    topK = st.number_input(
+            'Enter a value for K:',
+            min_value=1, max_value=len(df), value=val, step=100)
+    top_df = all_df.head(topK)
+    st.markdown(f'Top {len(top_df)} out of {len(all_df)} Total Products')
     st.dataframe(top_df,
                 column_order=("Title", "Minimum_Revenue", "Price","Currency","Sponsored","Rating","Reviews_Count","Best_Seller","Sales_Volume_Past_Month","Prime","Price_Strikethrough","Discount","Discount_Rate","Search_Term", "Position","ASIN","URL","Image_URL"),
                 hide_index=True,
