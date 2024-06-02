@@ -7,10 +7,6 @@ import plotly.express as px
 from collections import Counter
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-import nltk
-from nltk import ngrams
-nltk.download('stopwords')
-from nltk.corpus import stopwords
 #######################
 st.set_page_config(
     page_title="Amazon Jewelry Dashboard",
