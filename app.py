@@ -153,17 +153,19 @@ colors[-n_colors//5:] *= darkening_factor
 colors = np.clip(colors, 0, 1)
 darkened_cmap = LinearSegmentedColormap.from_list('darkened_blues', colors)
 
-def wordcloud(n):
-    data = unique.Title.head(n)
+def wordcloud(topK,n):
+    data = unique.Title.head(topK)
     all_ngrams = []
     for item in data:
         translator = str.maketrans('', '', string.punctuation)
         item = item.translate(translator)
         tokens = item.split(" ")
-        for i in range(2,4): 
-            ngrams_list = list(ngrams(tokens, i))
-            ngrams_list = ['_'.join(gram) for gram in ngrams_list]
-        all_ngrams.extend(ngrams_list)
+        ngrams_list = list(ngrams(tokens, n))
+        grams = []
+        for gram in ngrams_list: 
+            if '' in gram: continue 
+            grams.append(" ".join(gram))
+        all_ngrams.extend(grams)
     data = Counter(all_ngrams)
     wordcloud = WordCloud(width=2000, height=1000, background_color='white',colormap=darkened_cmap).generate_from_frequencies(data)
     fig, ax = plt.subplots()
@@ -230,16 +232,12 @@ with col[1]:
             - :blue[**Sponsored/Paid**]: These are the paid advertisements among the results that are returned for a query. 
             ''')
     
-
+ngram_types = {'Unigram':1,'Trigram':3,'Bigram':2,'4-Gram': 4}
 with col[0]: 
     if "Frequent Phrases" in select_metric: 
-        # if 1000 < len(all_df): val = 1000
-        # else: val = len(all_df)
-        # topK = st.number_input(
-        #     'Enter a value for K:',
-        #     min_value=1, max_value=len(all_df), value=val, step=100,key="phrases")
         st.markdown(f'#### Frequent Phrases in Titles for the Top {topK} Products')
-        frequencies = wordcloud(topK)
+        n = st.selectbox('Select a type of n-gram', ['Unigram','Bigram','Trigram','4-Gram'],index=2)
+        frequencies = wordcloud(topK,ngram_types[n])
         st.write(f"Top {len(frequencies)} phrases")
         frequencies = pd.DataFrame.from_dict(frequencies, orient='index').reset_index()
         frequencies.columns = ['Phrase', 'Frequency']
