@@ -205,6 +205,8 @@ with col[1]:
             - :blue[**Search Term**] and :blue[**Position**]: The relevant search terms and the product's positions in the search results for those terms (across all pages) are divided respectively by semicolons. These terms are among those with the highest search volume associated with more general key terms based on [Keyword Tool](https://keywordtool.io/).
             - :blue[**Revenue**]: Price multiplied by the count of reviews. 
             - :blue[**Past Month Sales**]: These are products which have approximate sales information for the past month, e.g., "2K+ bought in past month."
+	    - :blue[**Organic**]: These are the non-sponsored search results returned for a query. 
+     	    - :blue[**Sponsored/Paid**]: These are the paid advertisements among the results that are returned for a query. 
             ''')
     
 
