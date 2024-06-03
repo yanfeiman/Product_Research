@@ -8,7 +8,6 @@ from collections import Counter
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
-import nltk
 from nltk.util import ngrams
 import string 
 #######################
@@ -160,7 +159,7 @@ def wordcloud(n):
     for item in data:
         translator = str.maketrans('', '', string.punctuation)
         item = item.translate(translator)
-        tokens = nltk.word_tokenize(item)
+        tokens = item.split(" ")
         for i in range(2,4): 
             ngrams_list = list(ngrams(tokens, i))
             ngrams_list = ['_'.join(gram) for gram in ngrams_list]
