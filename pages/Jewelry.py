@@ -24,6 +24,13 @@ products = products.drop(columns=['Unnamed: 0'])
 products = pd.concat([products,pd.read_csv(f'data/products2.csv',low_memory=False)], ignore_index=True) 
 products.drop_duplicates(inplace=True)
 
+crystals = ['jade','citrine','rose quartz','tourmaline',
+             'blue lace agate','sunstone','clear quartz',
+             'aura quartz','black agate','black jasper',
+             'agate','aventurine','calcite','carnelian','fluorite',
+             'hematite','jasper','labradorite','malachite','moldavite',
+             'obsidian','opalite','selenite','shungite',"tiger's eye",
+             'turquoise','orgone','topaz','garnet','lepidolite','smoky quartz']
 
 stats = pd.read_csv('data/stats_jewelry.csv')
 stats['Product Type'] = stats['Product Type'].astype(str)
