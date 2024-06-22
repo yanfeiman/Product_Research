@@ -24,14 +24,6 @@ products = products.drop(columns=['Unnamed: 0'])
 products = pd.concat([products,pd.read_csv(f'data/products2.csv',low_memory=False)], ignore_index=True) 
 products.drop_duplicates(inplace=True)
 
-crystals = ['jade','citrine','rose quartz','tourmaline',
-             'blue lace agate','sunstone','clear quartz',
-             'aura quartz','black agate','black jasper',
-             'agate','aventurine','calcite','carnelian','fluorite',
-             'hematite','jasper','labradorite','malachite','moldavite',
-             'obsidian','opalite','selenite','shungite',"tiger's eye",
-             'turquoise','orgone','topaz','garnet','lepidolite','smoky quartz']
-
 stats = pd.read_csv('data/stats_jewelry.csv')
 stats['Product Type'] = stats['Product Type'].astype(str)
 
@@ -225,14 +217,13 @@ with col[0]:
         frequencies = frequencies.sort_values(by=['Frequency','Phrase'], ascending=[False,True])
         frequencies.reset_index(drop=True, inplace=True)
         st.dataframe(frequencies,width=None)
-        if selected_category not in crystals: 
-            st.markdown(f'#### Frequent Search Terms for the Top {topK} Products')
-            terms = bar_searchterms(topK)
-            terms = pd.DataFrame.from_dict(terms, orient='index').reset_index()
-            terms.columns = ['Search Phrase', 'Frequency']
-            terms = terms.sort_values(by=['Frequency','Search Phrase'], ascending=[False,True])
-            terms.reset_index(drop=True, inplace=True)
-            st.dataframe(terms,width=None)
+        st.markdown(f'#### Frequent Search Terms for the Top {topK} Products')
+        terms = bar_searchterms(topK)
+        terms = pd.DataFrame.from_dict(terms, orient='index').reset_index()
+        terms.columns = ['Search Phrase', 'Frequency']
+        terms = terms.sort_values(by=['Frequency','Search Phrase'], ascending=[False,True])
+        terms.reset_index(drop=True, inplace=True)
+        st.dataframe(terms,width=None)
     else: 
         st.markdown(f'#### {select_metric}')
         st.markdown('Average')
