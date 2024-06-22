@@ -1,2 +1,2 @@
 # Product_Research
-https://jewelry.streamlit.app
+https://beauty.streamlit.app
