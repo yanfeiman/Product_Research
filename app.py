@@ -12,7 +12,7 @@ from nltk.util import ngrams
 import string 
 #######################
 st.set_page_config(
-    page_title="Amazon Jewelry Dashboard",
+    page_title="Jewelry Dashboard",
     page_icon="💎",
     layout="wide",
     initial_sidebar_state="expanded")
