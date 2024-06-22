@@ -50,7 +50,7 @@ st.markdown(
 """
 )
 
-with st.expander('About', expanded=True):
+with st.expander('Explanation of Terms', expanded=True):
         st.markdown('''
             - :blue[**Search Phrases**] and :blue[**Position**]: The relevant search phrases and the product's positions in the search results for those phrases (across all pages) are divided respectively by semicolons. These phrases are among those with the highest search volume associated with more general key terms (**Search Keywords**) based on [Keyword Tool](https://keywordtool.io/).
             - :blue[**Revenue**]: Price multiplied by the count of reviews. 
