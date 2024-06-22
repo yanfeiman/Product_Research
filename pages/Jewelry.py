@@ -19,19 +19,9 @@ st.set_page_config(
 
 
 #######################
-products = pd.read_csv('data/products.csv')
+products = pd.read_csv('data/products.csv',low_memory=False)
 products = products.drop(columns=['Unnamed: 0'])
-
-crystals = ['jade','citrine','rose quartz','tourmaline',
-             'blue lace agate','sunstone','clear quartz',
-             'aura quartz','black agate','black jasper',
-             'agate','aventurine','calcite','carnelian','fluorite',
-             'hematite','jasper','labradorite','malachite','moldavite',
-             'obsidian','opalite','selenite','shungite',"tiger's eye",
-             'turquoise','orgone','topaz','garnet','lepidolite','smoky quartz']
-# https://www.holisticshop.co.uk/crystals/popular-crystals
-for term in crystals: 
-    products = pd.concat([products,pd.read_csv(f'data/{term}.csv')], ignore_index=True) 
+products = pd.concat([products,pd.read_csv(f'data/products2.csv',low_memory=False)], ignore_index=True) 
 products.drop_duplicates(inplace=True)
 
 

@@ -19,7 +19,7 @@ st.set_page_config(
 
 
 #######################
-products = pd.read_csv('data/nail.csv')
+products = pd.read_csv('data/nail.csv',low_memory=False)
 stats = pd.read_csv('data/stats_nail.csv')
 allterms = ['nail','nail polish','press on nails','nail stickers']
 for term in allterms: 
