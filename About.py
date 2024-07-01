@@ -1,18 +1,32 @@
+#######################
 import streamlit as st
+from translation import *
+from st_pages import Page, show_pages, add_page_title
+#######################
+# add_page_title()
 
-st.set_page_config(
-    page_title="About",
-    # page_icon="👋",
+show_pages(
+    [
+        Page("About.py", Text("About")),
+        Page("pages/Jewelry.py", Text("Jewelry")),
+        Page("pages/Nails.py", Text("Nails")),
+    ]
 )
 
-st.write("# Analytics for Product Research")
+with st.sidebar:
+    lang = st.selectbox('选择语言/Select Language： ', ["简体中文/Chinese (simplified)","英文/English"], index=0)
+    if lang == "英文/English":
+        langcode = "en"
+    else: 
+        langcode = "zh"
 
-# st.sidebar.success("Browse a page above.")
+st.write(f"## {Text('Analytics for Product Research')}")
+
 st.markdown("""
 <style>
     .stSelectbox:first-of-type > div[data-baseweb="select"] > div {
 	    background-color: white;
-    	padding: 10px;
+    	padding: 2px;
         border: none;
 	}
     
@@ -37,26 +51,25 @@ st.markdown("""
     
 </style>
 """, unsafe_allow_html=True)
-# header {visibility: hidden;}
 
 st.markdown(
+    f"""
+    {Text("This app provides aggregate statistics for product data from searches on [**Amazon**](amazon.com) collected using [**Oxylabs' E-Commerce Scraper API**](https://oxylabs.io/products/scraper-api/ecommerce/amazon). Of the scraped results, only products with at least one review are included for analysis.")} 
+
+    {Text("Browse already collected data on these pages linked below and in the left sidebar:")} 
+    - [{Text("Jewelry")}](https://beauty.streamlit.app/Jewelry)
+    - [{Text("Nails")}](https://beauty.streamlit.app/Nails)
+
     """
-    This app provides aggregate statistics for product data on [**Amazon**](amazon.com) and [**Etsy**](etsy.com) collected using [**Oxylabs' E-Commerce Scraper API**](https://oxylabs.io/products/scraper-api/ecommerce/amazon). Of the scraped results, only products with at least one review are included for analysis. 
-
-    Browse already collected data on these pages linked below and in the left sidebar: 
-    - [Jewelry](https://beauty.streamlit.app/)
-    - [Nails](https://beauty.streamlit.app/)
-
-"""
 )
 
-with st.expander('Explanation of Terms', expanded=True):
-        st.markdown('''
-            - :blue[**Search Phrases**] and :blue[**Position**]: The relevant search phrases and the product's positions in the search results for those phrases (across all pages) are divided respectively by semicolons. These phrases are among those with the highest search volume associated with more general key terms (**Search Keywords**) based on [Keyword Tool](https://keywordtool.io/).
-            - :blue[**Revenue**]: Price multiplied by the count of reviews. 
-            - :blue[**Past Month Sales**]: These are products which have approximate sales information for the past month, e.g., "2K+ bought in past month."
-            - :blue[**Organic**]: These are the non-sponsored search results returned for a query. 
-            - :blue[**Sponsored/Paid**]: These are the paid advertisements among the results that are returned for a query. 
+with st.expander(Text('Explanation of Terms'), expanded=True):
+        st.markdown(f'''
+            - :blue[**{Text("Search Phrase")}**] and :blue[**{Text("Position")}**]: {Text("The relevant search phrases and the product's positions in the search results for those phrases (across all pages) are divided respectively by semicolons. These phrases are among those with the highest search volume associated with general categories based on [Keyword Tool](https://keywordtool.io/).")}
+            - :blue[**{Text("Revenue")}**]: {Text("To estimate the minimum revenue for a product, we multiply price by the count of reviews.")}
+            - :blue[**{Text("Past Month Sales Volume")}**]: {Text("These are products which have approximate sales information for the past month, e.g., '2K+ bought in past month.'")}
+            - :blue[**{Text("Organic Search Result")}**]: {Text("These are the non-sponsored search results returned for a query.")} 
+            - :blue[**{Text("Paid Search Result")}**]: {Text("These are the sponsored results that are returned for a query.")} 
             ''')
 # ### See more complex demos
     # - Use a neural net to [analyze the Udacity Self-driving Car Image
