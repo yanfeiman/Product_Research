@@ -45,10 +45,10 @@ class Dashboard():
                     p_type = stats['Product Type'][idx]
                     term = f"{Text(p_type)} - {Text(term)}" 
                     if term not in metrics: metrics[term] = None 
-                    if f"{Text(p_type)} - {Text("Search Phrases")}" not in metrics: 
-                        metrics[f"{Text(p_type)} - {Text("Search Phrases")}"] = None 
-                    if f"{Text(p_type)} - {Text("Titles")}" not in metrics: 
-                        metrics[f"{Text(p_type)} - {Text("Titles")}"] = None 
+                    if f"{Text(p_type)} - {Text('Search Phrases')}" not in metrics: 
+                        metrics[f"{Text(p_type)} - {Text('Search Phrases')}"] = None 
+                    if f"{Text(p_type)} - {Text('Titles')}" not in metrics: 
+                        metrics[f"{Text(p_type)} - {Text('Titles')}"] = None 
             else: 
                 df = products[products.Keyword == selected_category.lower()]
                 metrics = [Text("Revenue"),Text("Price"),Text("Rating"),Text("Reviews Count"),
