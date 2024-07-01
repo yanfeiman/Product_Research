@@ -1,5 +1,5 @@
 from translation import *
-from dashboard import *
+from ..dashboard import *
 
 products = pd.read_csv('data/nail.csv',low_memory=False)
 stats = pd.read_csv('data/stats_nail.csv')

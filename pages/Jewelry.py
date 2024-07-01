@@ -1,5 +1,5 @@
 from translation import *
-from dashboard import *
+from ..dashboard import *
 
 products = pd.read_csv('data/products.csv',low_memory=False)
 products = products.drop(columns=['Unnamed: 0'])
