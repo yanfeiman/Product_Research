@@ -14,6 +14,8 @@ en_to_zh = {
     "Analytics for Product Research":"产品研究分析",
     "This app provides aggregate statistics for product data from searches on [**Amazon**](amazon.com) collected using [**Oxylabs' E-Commerce Scraper API**](https://oxylabs.io/products/scraper-api/ecommerce/amazon). Of the scraped results, only products with at least one review are included for analysis.":
     "本应用软件提供了使用[**Oxylabs' E-Commerce Scraper API**](https://oxylabs.io/products/scraper-api/ecommerce/amazon)收集的[**Amazon**](amazon.com)亚马逊产品搜索的数据统计. 被收集数据的产品每一个至少被一个用户评论过。",
+    "This app provides aggregate statistics for product data from searches on [**Amazon**](amazon.com). Only products with at least one review are included for analysis.":
+    "本应用软件提供了[**Amazon**](amazon.com)亚马逊产品搜索的数据统计. 被收集数据的产品每一个至少被一个用户评论过。",
     "Browse already collected data on these pages linked below and in the left sidebar:":
     "浏览在下面和左侧栏链接的这些页面上已经收集的数据:",
     "Jewelry":"珠宝首饰",

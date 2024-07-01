@@ -54,8 +54,8 @@ st.markdown("""
 
 st.markdown(
     f"""
-    {Text("This app provides aggregate statistics for product data from searches on [**Amazon**](amazon.com) collected using [**Oxylabs' E-Commerce Scraper API**](https://oxylabs.io/products/scraper-api/ecommerce/amazon). Of the scraped results, only products with at least one review are included for analysis.")} 
-
+    {Text("This app provides aggregate statistics for product data from searches on [**Amazon**](amazon.com). Only products with at least one review are included for analysis.")} 
+    
     {Text("Browse already collected data on these pages linked below and in the left sidebar:")} 
     - [{Text("Jewelry")}](https://beauty.streamlit.app/Jewelry)
     - [{Text("Nails")}](https://beauty.streamlit.app/Nails)
