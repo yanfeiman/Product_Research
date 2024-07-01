@@ -1,5 +1,7 @@
 from translation import *
-from pages.dashboard import *
+import sys 
+sys.path.insert(1, "/mount/src/product_research/pages") 
+from dashboard import *
 
 products = pd.read_csv('data/products.csv',low_memory=False)
 products = products.drop(columns=['Unnamed: 0'])
