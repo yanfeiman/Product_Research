@@ -1,5 +1,6 @@
 #######################
-from translation import * 
+from PRODUCT_APP.app.models.translation import *
+from app import Text,langcode
 import streamlit as st
 import json 
 import pandas as pd
@@ -24,6 +25,7 @@ darkened_cmap = LinearSegmentedColormap.from_list('darkened_blues', colors)
 class Dashboard(): 
     def __init__(self, title, allterms, products, stats):
         self.allterms = allterms
+        products = products.sort_values(by=["Minimum_Revenue"],ascending=[False])
         self.products = products
         self.stats = stats 
 

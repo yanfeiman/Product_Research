@@ -6,3 +6,4 @@ plotly
 nltk
 wordcloud
 st_pages
+requests
