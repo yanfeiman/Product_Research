@@ -4,10 +4,17 @@ en_to_zh = {
     "and":"和",
     "Search":"搜索",
     'Last Updated':'最新更新',
+    "Sorting Order":"排序顺序",
+    "Sort by (in this order)":"排序方式（按此顺序",
+    "Choose an option":"选择一个选项",
+    "High to Low": "从高到低",
+    "Low to High":"从低到高",
     'Product Search':"商品搜索",
+    "Categories":"上级类别",
+    "Subcategories":"子类别",
     "Analytics for Product Research":"商品研究分析",
     "This website provides aggregate statistics for product data from searches on Amazon. Only products with at least one review are included for analysis.":
-    "本网站提供亚马逊商品搜索数据整合以及统计. 被显示的商品每一个至少被一个用户评论过。",
+    "本网站提供亚马逊商品搜索数据的整合以及统计. 被显示的商品每一个至少被一个用户评论过。",
     "Browse already collected data on these pages linked below and in the left sidebar:":
     "浏览在下面和左侧栏链接的这些页面上已经收集的数据:",
     "Jewelry":"珠宝首饰",
@@ -25,10 +32,13 @@ en_to_zh = {
     "Paid":"赞助商",
     "Amazon's Choice": "亚马逊推荐",
     "Search Result":"搜索结果",
+    "Search Result Source":"搜索结果来源",
     "The relevant search phrases and the product's positions in the search results for those phrases (across all pages) are divided respectively by semicolons. These phrases are among those with the highest search volume associated with general categories based on [Keyword Tool](https://keywordtool.io/).":
     "相关搜索短语和商品在这些短语的搜索结果中的总位置在数据表中分别用分号隔开。根据[Keyword Tool](https://keywordtool.io/)，这些短语属于与一般类别相关的搜索量最高的短语。",
     "The relevant search phrases and the product's positions in the search results for those phrases (across all pages) are divided respectively by semicolons.":
     "相关搜索短语和商品在这些短语的搜索结果中的总位置在数据表中分别用分号隔开。",
+    "Each search phrase is a keyword which we applied to a relevant category. Browse the dropdown menu to the right to explore, and filter these keywords by categories.": 
+    "每个搜索短语都是我们应用于相关类别的关键词。请浏览右侧的下拉菜单进行搜索，并按类别筛选这些关键词",
     "To estimate the minimum revenue for a product, we multiply price by the count of reviews.":
     "为了估算商品的最低收入，我们用价格乘以评论数",
     "These are products which have approximate sales information for the past month, e.g., '2K+ bought in past month.'":
@@ -77,6 +87,8 @@ en_to_zh = {
     'Image': '图片', 
     "Page": '页面',
     
+    ## INSTRUMENTS
+    "violin":"小提琴",
     ## JEWELRY 
     "All":"全部",
     "earrings": "耳环", 

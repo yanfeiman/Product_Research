@@ -259,9 +259,5 @@ class Dashboard():
         st.pyplot(fig)
         return data
         
-    # def histogram(title): 
-    #     data = unique[title]
-    #     fig = px.histogram(data, nbins=30, labels={'value': 'Value', 'count': 'Frequency'})
-    #     st.plotly_chart(fig)
         
     #######################
