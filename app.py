@@ -5,7 +5,7 @@ import json
 import math 
 from utils.translation import *
 from st_pages import Page, show_pages, add_page_title
-from streamlit_dynamic_filters import DynamicFilters
+from utils.visualize import * 
 ###############################
 
 langcode = "zh" 
@@ -32,7 +32,6 @@ def Text(string):
 
 ###############################
 PRODUCTS = pd.read_csv(f"data/products.csv")
-
 # get categories 
 with open(f'data/categories_graph.json',"r") as  file: 
     CATEGORIES_GRAPH = json.load(file)
@@ -209,6 +208,20 @@ else:
     kdf = cat_df.copy()
 cat_df = kdf.copy()
 
+pricecol = st.columns([6,2,2])
+minprice = min(cat_df[Text("Price (USD)")])
+maxprice = max(cat_df[Text("Price (USD)")])
+mymin,mymax = minprice,maxprice
+with pricecol[0]:
+    
+    mymin,mymax = st.slider(
+        Text("Price Range"),
+        minprice, maxprice, (mymin, mymax))
+with pricecol[1]:
+    mymin = st.number_input(Text("Min"),min_value=minprice,max_value=maxprice,value=mymin)
+with pricecol[2]:
+    mymax = st.number_input(Text("Max"),min_value=minprice,max_value=maxprice,value=mymax)
+cat_df = cat_df[(cat_df[Text("Price (USD)")] >= mymin) & (cat_df[Text("Price (USD)")] <= mymax)]
 
 # for option in options: 
 #     if option == Text("Best Seller"):
@@ -227,46 +240,129 @@ topn = 25
 start, end = 0,topn
 with cols[2]:
     page = st.number_input(Text("Page"),min_value=1,max_value=math.ceil(len(cat_df)/topn),step=1)
-    start = page * topn
-    end = start + 50
+    start = (page-1) * topn
+    end = start + topn
 
+cat_df = cat_df.drop_duplicates()
+
+
+cat_df = cat_df.sort_values(by=sortby,ascending=[sortorder==Text("Low to High")]* len(sortby))
+
+rows = cat_df.iloc[start:end]
 if langcode == "zh": 
     st.markdown(f"共有 {len(cat_df)} 种产品. 第 {page} 页显示 {min(topn,len(cat_df))} 种产品.")
 else: 
     st.markdown(f"There are a total of {len(cat_df)} products. Showing {min(topn,len(cat_df))} products on page {page}.")
-cat_df = cat_df.drop_duplicates()
-cat_df = cat_df.sort_values(by=sortby,ascending=[sortorder==Text("Low to High")]* len(sortby))
 
-rows = cat_df.iloc[start:end]
-
+###############################
+# visualizations 
 st.markdown("---")
-dim=(1.25,3,2,1,1,2,1,1,1,2,1,1)
-cols = st.columns(dim, gap='small')
-for idx, head in enumerate(display_cols.values()):
-    if idx == 1: continue 
-    if idx == 0: 
-        cols[idx].write(head)
+metrics = [Text("Minimum Revenue"),Text("Price (USD)"),Text("Rating"),Text("Reviews Count"),
+            Text("Amount Discounted"),Text("Percent Discounted"), Text("Titles")]
+
+viscols = st.columns([5,5])
+with viscols[0]:
+    select_metric = st.selectbox(Text('Select a metric'),metrics)
+with viscols[1]:
+    if len(cat_df) > 150: val = 150
+    else: val = len(cat_df)
+    topK = st.number_input(
+            Text('To see aggregate statistics for the top K products, enter a value for K:'),
+            min_value=1, max_value=len(cat_df), value=val, step=10,key="topk")
+top_df = cat_df.head(topK)
+product_types = [Text("Organic Search Result"),Text("Amazon's Choice"),Text("Paid Search Result"),
+                 Text("Best Seller"),Text("Past Month Sales Volume"), Text("Price Changed"),Text("Prime")]
+
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
+from nltk.util import ngrams
+
+original_cmap = plt.cm.Blues
+n_colors = 256
+colors = original_cmap(np.linspace(0, 1, n_colors))
+darkening_factor = 0.8
+colors[-n_colors//5:] *= darkening_factor
+colors = np.clip(colors, 0, 1)
+darkened_cmap = LinearSegmentedColormap.from_list('darkened_blues', colors)
+def wordcloud(data,topK,n):
+    data = data[Text("Title and URL")].head(topK)
+    all_ngrams = []
+    for item in data:
+        tokens = item.split(" ")
+        ngrams_list = list(ngrams(tokens, n))
+        grams = []
+        for gram in ngrams_list: 
+            if '' in gram: continue 
+            grams.append(" ".join(gram))
+        all_ngrams.extend(grams)
+    data = Counter(all_ngrams)
+    wordcloud = WordCloud(width=2000, height=1000, background_color='white',colormap=darkened_cmap).generate_from_frequencies(data)
+    fig, ax = plt.subplots()
+    ax.imshow(wordcloud, interpolation='bilinear')
+    ax.axis('off')
+    st.pyplot(fig)
+    return data
+
+if Text("Titles") == select_metric:
+    if langcode != "zh":  
+        st.markdown(f'#### Frequent Phrases in Titles for the Top {topK} Products')
     else: 
-        cols[idx-1].write(head)
-st.markdown("---")
-for i, row in rows.iterrows():
-    cols = st.columns(dim, gap='small')
-
-    for j, col in enumerate(rows.columns):
-        if j == 1: continue
-        if col == Text("Prime"):
-            cols[j-1].checkbox('Prime', value=row[col], key=f'{col}_{i}_prime', label_visibility="hidden",disabled=True)
-        elif col == Text("Best Seller"):
-            cols[j-1].checkbox('Best Seller', value=row[col], key=f'{col}_{i}_bestseller', label_visibility="hidden",disabled=True)
-        elif col in Text("Image"):
-            cols[0].image(row[Text("Image")], use_column_width="always")
-        elif col == Text('Title and URL'):
-            url = row.iloc[1]
-            asin = row.iloc[1].split("/")[-1]
-            cols[j-1].write(row[col])
-            cols[j-1].markdown(f'<a href="{url}" target="_blank">{asin}</a>', unsafe_allow_html=True)
+        st.markdown(f'#### 排名前 {topK} 产品标题中的常见短语')
+    
+    n = st.selectbox(Text('Select a type of n-gram'), [Text('Unigram'),Text('Bigram'),Text('Trigram'),Text('4-Gram')],index=2)
+    n = Text(n)
+    wordcols = st.columns([8,2])
+    with wordcols[0]:
+        frequencies = wordcloud(rows,topK,ngram_types[n])
+        frequencies = pd.DataFrame.from_dict(frequencies, orient='index').reset_index()
+        frequencies.columns = [Text('N-gram'), Text('Frequency')]
+        frequencies = frequencies.sort_values(by=[Text('Frequency'),Text('N-gram')], ascending=[False,True])
+        frequencies.reset_index(drop=True, inplace=True)
+    with wordcols[1]: 
+        if langcode != "zh":
+            st.write(f"Top {len(frequencies)} N-grams")
         else: 
-            cols[j-1].write(row[col])
+            st.write(f"一共 {len(frequencies)} 个符串")
+        st.dataframe(frequencies,width=None)
+
+else: 
+    stats = [{Text('Average'):round(rows[select_metric].mean(),2),Text('Median'):round(rows[select_metric].median(),2)}]
+    stats = pd.DataFrame(stats)
+    st.dataframe(stats)
+
+###############################
+
+if len(cat_df) > 0: 
+    
+    st.markdown("---")
+    dim=(1.25,3,2,1,1,2,1,1,1,2,1,1)
+    cols = st.columns(dim, gap='small')
+    for idx, head in enumerate(display_cols.values()):
+        if idx == 1: continue 
+        if idx == 0: 
+            cols[idx].write(head)
+        else: 
+            cols[idx-1].write(head)
+    st.markdown("---")
+    for i, row in rows.iterrows():
+        cols = st.columns(dim, gap='small')
+
+        for j, col in enumerate(rows.columns):
+            if j == 1: continue
+            if col == Text("Prime"):
+                cols[j-1].checkbox('Prime', value=row[col], key=f'{col}_{i}_prime', label_visibility="hidden",disabled=True)
+            elif col == Text("Best Seller"):
+                cols[j-1].checkbox('Best Seller', value=row[col], key=f'{col}_{i}_bestseller', label_visibility="hidden",disabled=True)
+            elif col in Text("Image"):
+                cols[0].image(row[Text("Image")], use_column_width="always")
+            elif col == Text('Title and URL'):
+                url = row.iloc[1]
+                asin = row.iloc[1].split("/")[-1]
+                cols[j-1].write(row[col])
+                cols[j-1].markdown(f'<a href="{url}" target="_blank">{asin}</a>', unsafe_allow_html=True)
+            else: 
+                cols[j-1].write(row[col])
         
 
 
@@ -316,19 +412,9 @@ st.markdown("""
         padding-right: 0rem;
     }
             
-    .link-button {
-        background: none;
-        border: none;
-        color: blue;
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-    }
-    .link-container {
-        display: flex;
-        gap: 10px;  /* Adjust the spacing between buttons here */
+    .stMultiSelect [role="listbox"] {
+        max-width: 500px;  /* Adjust the width as needed */
+        white-space: normal;  /* Allow text wrapping */
     }
             
 </style>
