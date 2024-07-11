@@ -278,6 +278,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from nltk.util import ngrams
 import numpy as np 
 from collections import Counter 
+ngram_types = {'Unigram':1,'Trigram':3,'Bigram':2,'4-Gram': 4}
 original_cmap = plt.cm.Blues
 n_colors = 256
 colors = original_cmap(np.linspace(0, 1, n_colors))
