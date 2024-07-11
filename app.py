@@ -277,7 +277,8 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 from nltk.util import ngrams
-
+import numpy as np 
+from collections import Counter 
 original_cmap = plt.cm.Blues
 n_colors = 256
 colors = original_cmap(np.linspace(0, 1, n_colors))
