@@ -5,7 +5,7 @@ en_to_zh = {
     "Search":"搜索",
     'Last Updated':'最新更新',
     "Sorting Order":"排序顺序",
-    "Sort by (in this order)":"排序方式（按此顺序",
+    "Sort by (in this order)":"排序方式（按此顺序)",
     "Choose an option":"选择一个选项",
     "High to Low": "从高到低",
     "Low to High":"从低到高",
