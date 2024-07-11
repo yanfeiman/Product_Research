@@ -5,7 +5,6 @@ import json
 import math 
 from utils.translation import *
 from st_pages import Page, show_pages, add_page_title
-from utils.visualize import * 
 ###############################
 
 langcode = "zh" 
