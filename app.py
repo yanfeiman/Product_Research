@@ -254,10 +254,10 @@ else:
     st.markdown(f"There are a total of {len(cat_df)} products. Showing {min(topn,len(cat_df))} products on page {page}.")
 
 ###############################
-# visualizations 
+# stats 
 st.markdown("---")
-metrics = [Text("Minimum Revenue"),Text("Price (USD)"),Text("Rating"),Text("Reviews Count"),
-            Text("Amount Discounted"),Text("Percent Discounted"), Text("Titles")]
+metrics = [Text("Titles"),Text("Minimum Revenue"),Text("Price (USD)"),Text("Rating"),Text("Reviews Count"),
+            Text("Amount Discounted"),Text("Percent Discounted")]
 
 viscols = st.columns([5,5])
 with viscols[0]:
