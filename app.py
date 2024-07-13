@@ -207,20 +207,21 @@ else:
     kdf = cat_df.copy()
 cat_df = kdf.copy()
 
-pricecol = st.columns([6,2,2])
-minprice = min(cat_df[Text("Price (USD)")])
-maxprice = max(cat_df[Text("Price (USD)")])
-mymin,mymax = minprice,maxprice
-with pricecol[0]:
-    
-    mymin,mymax = st.slider(
-        Text("Price Range"),
-        minprice, maxprice, (mymin, mymax))
-with pricecol[1]:
-    mymin = st.number_input(Text("Min"),min_value=minprice,max_value=maxprice,value=mymin)
-with pricecol[2]:
-    mymax = st.number_input(Text("Max"),min_value=minprice,max_value=maxprice,value=mymax)
-cat_df = cat_df[(cat_df[Text("Price (USD)")] >= mymin) & (cat_df[Text("Price (USD)")] <= mymax)]
+if len(cat_df) > 0: 
+    pricecol = st.columns([6,2,2])
+    minprice = min(cat_df[Text("Price (USD)")])
+    maxprice = max(cat_df[Text("Price (USD)")])
+    mymin,mymax = minprice,maxprice
+    with pricecol[0]:
+        
+        mymin,mymax = st.slider(
+            Text("Price Range"),
+            minprice, maxprice, (mymin, mymax))
+    with pricecol[1]:
+        mymin = st.number_input(Text("Min"),min_value=minprice,max_value=maxprice,value=mymin)
+    with pricecol[2]:
+        mymax = st.number_input(Text("Max"),min_value=minprice,max_value=maxprice,value=mymax)
+    cat_df = cat_df[(cat_df[Text("Price (USD)")] >= mymin) & (cat_df[Text("Price (USD)")] <= mymax)]
 
 # for option in options: 
 #     if option == Text("Best Seller"):
@@ -237,40 +238,25 @@ cat_df = cat_df[display_cols.values()]
 ################ RESULTS 
 topn = 25
 start, end = 0,topn
-with cols[2]:
-    page = st.number_input(Text("Page"),min_value=1,max_value=math.ceil(len(cat_df)/topn),step=1)
-    start = (page-1) * topn
-    end = start + topn
-
+page = 1
 cat_df = cat_df.drop_duplicates()
 
 
 cat_df = cat_df.sort_values(by=sortby,ascending=[sortorder==Text("Low to High")]* len(sortby))
-
-rows = cat_df.iloc[start:end]
+if len(cat_df) > 0: 
+    with cols[2]:
+        page = st.number_input(Text("Page"),min_value=1,max_value=math.ceil(len(cat_df)/topn),step=1)
+        start = (page-1) * topn
+        end = start + topn
 if langcode == "zh": 
     st.markdown(f"共有 {len(cat_df)} 种产品. 第 {page} 页显示 {min(topn,len(cat_df))} 种产品.")
 else: 
     st.markdown(f"There are a total of {len(cat_df)} products. Showing {min(topn,len(cat_df))} products on page {page}.")
 
+rows = cat_df.iloc[start:end]
+
 ###############################
 # stats 
-st.markdown("---")
-metrics = [Text("Titles"),Text("Minimum Revenue"),Text("Price (USD)"),Text("Rating"),Text("Reviews Count"),
-            Text("Amount Discounted"),Text("Percent Discounted")]
-
-viscols = st.columns([5,5])
-with viscols[0]:
-    select_metric = st.selectbox(Text('Select a metric'),metrics)
-with viscols[1]:
-    if len(cat_df) > 150: val = 150
-    else: val = len(cat_df)
-    topK = st.number_input(
-            Text('To see aggregate statistics for the top K products, enter a value for K:'),
-            min_value=1, max_value=len(cat_df), value=val, step=10,key="topk")
-top_df = cat_df.head(topK)
-product_types = [Text("Organic Search Result"),Text("Amazon's Choice"),Text("Paid Search Result"),
-                 Text("Best Seller"),Text("Past Month Sales Volume"), Text("Price Changed"),Text("Prime")]
 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -305,32 +291,49 @@ def wordcloud(data,topK,n):
     st.pyplot(fig)
     return data
 
-if Text("Titles") == select_metric:
-    if langcode != "zh":  
-        st.markdown(f'#### Frequent Phrases in Titles for the Top {topK} Products')
-    else: 
-        st.markdown(f'#### 排名前 {topK} 产品标题中的常见短语')
-    
-    n = st.selectbox(Text('Select a type of n-gram'), [Text('Unigram'),Text('Bigram'),Text('Trigram'),Text('4-Gram')],index=2)
-    n = Text(n)
-    wordcols = st.columns([8,2])
-    with wordcols[0]:
-        frequencies = wordcloud(rows,topK,ngram_types[n])
-        frequencies = pd.DataFrame.from_dict(frequencies, orient='index').reset_index()
-        frequencies.columns = [Text('N-gram'), Text('Frequency')]
-        frequencies = frequencies.sort_values(by=[Text('Frequency'),Text('N-gram')], ascending=[False,True])
-        frequencies.reset_index(drop=True, inplace=True)
-    with wordcols[1]: 
-        if langcode != "zh":
-            st.write(f"Top {len(frequencies)} N-grams")
-        else: 
-            st.write(f"一共 {len(frequencies)} 个符串")
-        st.dataframe(frequencies,width=None)
+if len(cat_df) > 0: 
+    st.markdown("---")
+    metrics = [Text("Titles"),Text("Minimum Revenue"),Text("Price (USD)"),Text("Rating"),Text("Reviews Count"),
+                Text("Amount Discounted"),Text("Percent Discounted")]
 
-else: 
-    stats = [{Text('Average'):round(rows[select_metric].mean(),2),Text('Median'):round(rows[select_metric].median(),2)}]
-    stats = pd.DataFrame(stats)
-    st.dataframe(stats)
+    viscols = st.columns([5,5])
+    with viscols[0]:
+        select_metric = st.selectbox(Text('Select a metric'),metrics)
+    with viscols[1]:
+        if len(cat_df) > 150: val = 150
+        else: val = len(cat_df)
+        topK = st.number_input(
+                Text('To see aggregate statistics for the top K products, enter a value for K:'),
+                min_value=1, max_value=len(cat_df), value=val, step=10,key="topk")
+    top_df = cat_df.head(topK)
+    product_types = [Text("Organic Search Result"),Text("Amazon's Choice"),Text("Paid Search Result"),
+                    Text("Best Seller"),Text("Past Month Sales Volume"), Text("Price Changed"),Text("Prime")]
+    if Text("Titles") == select_metric:
+        if langcode != "zh":  
+            st.markdown(f'#### Frequent Phrases in Titles for the Top {topK} Products')
+        else: 
+            st.markdown(f'#### 排名前 {topK} 产品标题中的常见短语')
+        
+        n = st.selectbox(Text('Select a type of n-gram'), [Text('Unigram'),Text('Bigram'),Text('Trigram'),Text('4-Gram')],index=2)
+        n = Text(n)
+        wordcols = st.columns([8,2])
+        with wordcols[0]:
+            frequencies = wordcloud(rows,topK,ngram_types[n])
+            frequencies = pd.DataFrame.from_dict(frequencies, orient='index').reset_index()
+            frequencies.columns = [Text('N-gram'), Text('Frequency')]
+            frequencies = frequencies.sort_values(by=[Text('Frequency'),Text('N-gram')], ascending=[False,True])
+            frequencies.reset_index(drop=True, inplace=True)
+        with wordcols[1]: 
+            if langcode != "zh":
+                st.write(f"Top {len(frequencies)} N-grams")
+            else: 
+                st.write(f"一共 {len(frequencies)} 个符串")
+            st.dataframe(frequencies,width=None)
+
+    else: 
+        stats = [{Text('Average'):round(rows[select_metric].mean(),2),Text('Median'):round(rows[select_metric].median(),2)}]
+        stats = pd.DataFrame(stats)
+        st.dataframe(stats)
 
 ###############################
 
