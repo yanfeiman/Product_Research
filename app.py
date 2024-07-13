@@ -4,7 +4,6 @@ import pandas as pd
 import json 
 import math 
 from utils.translation import *
-from st_pages import Page, show_pages, add_page_title
 ###############################
 
 langcode = "zh" 
@@ -17,6 +16,7 @@ def Text(string):
     else: 
         return string
 ###############################
+# from st_pages import Page, show_pages, add_page_title
 # add_page_title()
 # if langcode == "zh": 
 #     show_pages(
