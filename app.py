@@ -16,6 +16,7 @@ def Text(string):
     else: 
         return string
 ###############################
+# for a multipage app 
 # from st_pages import Page, show_pages, add_page_title
 # add_page_title()
 # if langcode == "zh": 
