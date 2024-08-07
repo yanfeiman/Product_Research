@@ -143,7 +143,13 @@ en_to_zh = {
     "labradorite": "拉长石",
 
     #### NAILS 
-    'nail':'指甲','nail polish':'指甲油','press on nails':'按压式指甲','nail stickers':'指甲贴纸'
+    'nail':'指甲','nail polish':'指甲油','press on nails':'按压式指甲','nail stickers':'指甲贴纸',
+
+    ### Smokeless inhalers 
+    'electronic cigarettes':"电子香烟",
+    'e-cigarettes':"电子烟",
+    'smokeless inhaler':"无烟吸入器",
+    'herbal cigarettes':"草本香烟"
 }
 
 zh_to_en = {v:k for k,v in en_to_zh.items()}

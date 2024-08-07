@@ -31,7 +31,7 @@
 29,11968831,Upright Bass,直立低音提琴
 30,11968931,Viola,中提琴
 31,11969021,Violin,小提琴
-32,3880611,"Clothing, Shoes & Jewelry - Boys - Jewelry",服装、鞋类及首饰 - 男孩 - 首饰
+32,3880611,"Clothing, Shoes & Jewelry - Boys - Jewelry",服装、鞋类和首饰 - 男孩 - 首饰
 33,3880801,Bracelets,手链
 34,3880841,Necklaces,项链
 35,3880851,Cuff Links,袖扣
@@ -123,7 +123,7 @@
 121,7454914011,Bead,串珠
 122,7454915011,Clasp,搭扣
 123,7454916011,Italian Style,意大利式
-124,3887881,"Clothing, Shoes & Jewelry - Men - Jewelry",服装、鞋类及首饰 - 男士 - 首饰
+124,3887881,"Clothing, Shoes & Jewelry - Men - Jewelry",服装、鞋类及珠宝 - 男士 - 珠宝
 125,3888081,Bracelets,手链
 126,3888131,Cuff Links,袖扣
 127,3888141,Earrings,耳环
@@ -149,3 +149,35 @@
 147,17880334011,Studs,螺柱
 148,17880335011,Tapers,锥体
 149,17880336011,Tunnels,隧道
+150,3764401,Health Care - Smoking Cessation,戒烟
+151,3764411,Nicotine Gums & Lozenges,尼古丁口香糖及含片
+152,3764421,Nicotine Patches,尼古丁贴片
+153,4078751,Smokeless Inhalers,无烟吸入器
+154,11059311,Nail Art & Polish,美甲及指甲油
+155,17269950011,Base & Top Coats,底油和顶油
+156,13861691011,Curing Lamps,美甲固化灯
+157,16261986011,False Nails & Accessories,假指甲及配件
+158,13106071,Nail Art Accessories,美甲配件
+159,11063531,Nail Brushes,美甲刷
+160,3784801,Nail Dryers,指甲烘干机
+161,11059321,Nail Polish,指甲油
+162,11059371,Nail Polish Remover,指甲油去除剂
+163,3782871,Nail Thickening Solution,指甲增厚液
+164,17269952011,Base Coat,底油
+165,11059361,Combination Base & Top Coats,底油和顶油组合
+166,17269951011,Top Coat,顶油
+167,13861682011,Acrylic Nail Tools,丙烯酸美甲工具
+168,17269962011,Acrylic Powders & Liquids,丙烯酸粉末和液体
+169,3784781,False Nails,假指甲
+170,17269963011,Nail Glue,指甲胶水
+171,13861684011,Nail Tips,指甲贴片
+172,13106421,Nail Art Equipment,美甲设备
+173,17269953011,Decoration Kits,装饰套装
+174,17269954011,Fimo,粘土
+175,17269955011,Glitters,闪粉
+176,17269956011,Pearls,珍珠
+177,17269957011,Rhinestones,水钻
+178,17269958011,Stickers & Decals,贴纸及贴花
+179,17269959011,Striping Tape Lines,分条线
+180,17269960011,Studs,铆钉
+181,17269961011,Wraps,指甲贴膜

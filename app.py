@@ -42,7 +42,7 @@ ALL_ID_TO_NAME = {str(cat_id): (ids_names['name'][idx],ids_names['translation'][
 ALL_NAME_TO_ID = {ids_names['name'][idx]: str(cat_id) for idx, cat_id in enumerate(ids_names['id']) }
 ALL_NAME_TO_ID.update({ids_names['translation'][idx]: str(cat_id) for idx, cat_id in enumerate(ids_names['id']) }) 
 
-LASTUPDATED = "2024-07-03"
+LASTUPDATED = "2024-08-07"
 with open(f'data/search_ids.json',"r") as  file: 
     SEARCH_CATEGORIES = json.load(file)
 
