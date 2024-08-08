@@ -69,7 +69,7 @@ en_to_zh = {
     '4-Gram':"四字符串",
     "Type of Search Result":"搜索结果类型",
     'Product Type':"商品类型",
-    "Average":"平均数",
+    "Mean":"平均数",
     "Median":"中位数",
     "Best Seller":"畅销",
     "Prime":"亚马逊Prime",
@@ -144,12 +144,33 @@ en_to_zh = {
 
     #### NAILS 
     'nail':'指甲','nail polish':'指甲油','press on nails':'按压式指甲','nail stickers':'指甲贴纸',
+"base coat": "底油",
+    "combination base & top coats": "底油和顶油组合",
+    "top coat": "顶油",
+    "acrylic nail tools": "丙烯酸美甲工具",
+    "acrylic powders & liquids": "丙烯酸粉末和液体",
+    "false nails": "假指甲",
+    "nail glue": "指甲胶水",
+    "nail tips": "指甲贴片",
+    "nail art equipment": "美甲设备",
+    "decoration kits": "装饰套装",
+    "fimo": "粘土",
+    "glitters": "闪粉",
+    "pearls": "珍珠",
+    "rhinestones": "水钻",
+    "stickers & decals": "贴纸及贴花",
+    "striping tape lines": "分条线",
+    "studs": "铆钉",
+    "wraps": "指甲贴膜",
+
 
     ### Smokeless inhalers 
     'electronic cigarettes':"电子香烟",
     'e-cigarettes':"电子烟",
     'smokeless inhaler':"无烟吸入器",
     'herbal cigarettes':"草本香烟"
+
+
 }
 
 zh_to_en = {v:k for k,v in en_to_zh.items()}

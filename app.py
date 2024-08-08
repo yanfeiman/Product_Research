@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd 
 import json 
 import math 
+import altair as alt
 from utils.translation import *
 ###############################
 
@@ -122,6 +123,7 @@ display_cols = {
                 'rating':Text('Rating'),
                 'reviews_count':Text('Reviews Count'),
                 'source':Text("Source"),
+                'keyword':Text("Search Phrase"),
                 "sales_volume":Text("Past Month Sales Volume"),
                 "is_prime":Text('Prime'),
                 "best_seller":Text("Best Seller"),
@@ -194,7 +196,7 @@ else:
 
 
 keywords = {}
-for klist in cat_df['keyword']: 
+for klist in cat_df[Text("Search Phrase")]: 
     for k in klist.split("; "):
         keywords[Text(k)] = k
 mykeywords = st.multiselect(Text("Search Phrase"), keywords.keys(),placeholder =Text("Choose an option"))
@@ -202,7 +204,7 @@ if len(mykeywords) > 0:
     kdf = pd.DataFrame(columns=cat_df.columns)
     for k in mykeywords: 
         k = keywords[k]
-        selected_rows = cat_df[cat_df['keyword'].str.contains(k, case=False, na=False)]
+        selected_rows = cat_df[Text("Search Phrase").str.contains(k, case=False, na=False)]
         kdf = pd.concat([kdf, selected_rows])
 else: 
     kdf = cat_df.copy()
@@ -292,14 +294,31 @@ def wordcloud(data,topK,n):
     st.pyplot(fig)
     return data
 
+import plotly.express as px
+def bar_metric(selected_stats,title,metric="Mean"): 
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sorted_df = selected_stats.sort_values(by=metric, ascending=True)
+    sorted_df = sorted_df.head(50)
+    fig = px.bar(sorted_df, 
+        x=metric, 
+        y='Keyword', 
+        orientation='h', 
+        color=metric, 
+        color_continuous_scale='Blues',
+        labels={metric: title, 'Keyword': Text("Search Phrase")},
+        title=Text(metric))
+    st.plotly_chart(fig)
+
 if len(cat_df) > 0: 
     st.markdown("---")
     metrics = [Text("Titles"),Text("Minimum Revenue"),Text("Price (USD)"),Text("Rating"),Text("Reviews Count"),
                 Text("Amount Discounted"),Text("Percent Discounted")]
-
+    # product_types = [Text("All"),Text("Best Seller"),Text("Past Month Sales Volume"), Text("Price Changed"),Text("Prime")]
+    
     viscols = st.columns([5,5])
     with viscols[0]:
         select_metric = st.selectbox(Text('Select a metric'),metrics)
+        # select_ptype = st.selectbox(Text('Product Type'),product_types)
     with viscols[1]:
         if len(cat_df) > 150: val = 150
         else: val = len(cat_df)
@@ -307,8 +326,7 @@ if len(cat_df) > 0:
                 Text('To see aggregate statistics for the top K products, enter a value for K:'),
                 min_value=1, max_value=len(cat_df), value=val, step=10,key="topk")
     top_df = cat_df.head(topK)
-    product_types = [Text("Organic Search Result"),Text("Amazon's Choice"),Text("Paid Search Result"),
-                    Text("Best Seller"),Text("Past Month Sales Volume"), Text("Price Changed"),Text("Prime")]
+    
     if Text("Titles") == select_metric:
         if langcode != "zh":  
             st.markdown(f'#### Frequent Phrases in Titles for the Top {topK} Products')
@@ -332,16 +350,29 @@ if len(cat_df) > 0:
             st.dataframe(frequencies,width=None)
 
     else: 
-        stats = [{Text('Average'):round(rows[select_metric].mean(),2),Text('Median'):round(rows[select_metric].median(),2)}]
+        top_keywords = []
+        for klist in top_df[Text("Search Phrase")]: 
+            for k in klist.split("; "):
+                top_keywords.append(k)
+        stats = []
+        for k in set(top_keywords):
+            krows = top_df[top_df[Text("Search Phrase")].str.contains(k, case=False, na=False)] 
+            stats.append({"Keyword":k,"Title":select_metric,"Mean":round(krows[select_metric].mean(),2),"Median":round(krows[select_metric].median(),2)})
+        
         stats = pd.DataFrame(stats)
-        st.dataframe(stats)
+        stats = stats.drop_duplicates()
+        statscols = st.columns([5,5])
+        with statscols[0]:
+            bar_metric(stats,select_metric)
+        with statscols[1]:
+            bar_metric(stats,select_metric,"Median")
 
 ###############################
 
 if len(cat_df) > 0: 
     
     st.markdown("---")
-    dim=(1.25,3,2,1,1,2,1,1,1,2,1,1)
+    dim=(1.25,3,2,1,1,1,2,1,1,1,2,1,1)
     cols = st.columns(dim, gap='small')
     for idx, head in enumerate(display_cols.values()):
         if idx == 1: continue 
