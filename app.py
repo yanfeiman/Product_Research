@@ -3,8 +3,9 @@ import streamlit as st
 import pandas as pd 
 import json 
 import math 
-import altair as alt
 from utils.translation import *
+import plotly.express as px
+
 ###############################
 
 langcode = "zh" 
@@ -294,7 +295,6 @@ def wordcloud(data,topK,n):
     st.pyplot(fig)
     return data
 
-import plotly.express as px
 def bar_metric(selected_stats,title,metric="Mean"): 
     fig, ax = plt.subplots(figsize=(10, 6))
     sorted_df = selected_stats.sort_values(by=metric, ascending=True)
